@@ -1,0 +1,15 @@
+{
+    "name": "nxtblddemo",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "webpack",
+      "deploy": "npm run build && git add dist && git commit -m 'Deploy to GitHub Pages' && git push origin main"
+    },
+    "devDependencies": {
+      "typescript": "^4.5.5",
+      "webpack": "^5.64.4",
+      "webpack-cli": "^4.9.1",
+      "ts-loader": "^9.2.6"
+    }
+  }
+  
