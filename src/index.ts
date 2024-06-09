@@ -5,11 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const createButton = document.getElementById("create-button");
 
   const handleFiles = (files: FileList) => {
+    previewContainer.innerHTML = ''; // Clear previous previews
     for (const file of Array.from(files)) {
       const reader = new FileReader();
       reader.onload = (e) => {
         const img = document.createElement("img");
         img.src = e.target?.result as string;
+        img.alt = file.name;
         previewContainer?.appendChild(img);
       };
       reader.readAsDataURL(file);
